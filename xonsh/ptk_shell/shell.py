@@ -360,7 +360,7 @@ class PromptToolkitShell(BaseShell):
                 if osc[2:4] == "0;":
                     env["TITLE"] = osc[4:-1]
                 else:
-                    print(osc, file=sys.__stdout__, flush=True)
+                    print(osc, file=sys.__stdout__, flush=True, end='')
 
         toks = partial_color_tokenize(p)
 
